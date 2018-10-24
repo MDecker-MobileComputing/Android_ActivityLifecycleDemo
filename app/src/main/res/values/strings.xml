@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Activity-Lifecycle</string>
+
+    <string name="button_activity"       >Andere Activity</string>
+    <string name="button_loeschen"       >Log leeren</string>
+    <string name="title_activity_andere" >Andere Activity</string>
+    <string name="text_andere_activity"  >Klicken Sie den Zurück-Button, um zur Haupt-Activity zurückzukehren.</string>
+
+</resources>
