@@ -48,7 +48,7 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
 
         _textViewLogOutput = findViewById(R.id.textviewForLogoutput);
-        _textViewLogOutput.setMovementMethod(new ScrollingMovementMethod());
+        _textViewLogOutput.setMovementMethod( new ScrollingMovementMethod() );
 
         _buttonActivity  = findViewById(R.id.buttonActivity );
         _buttonLogLeeren = findViewById(R.id.buttonLogLeeren);
@@ -63,7 +63,7 @@ public class MainActivity extends Activity
     /**
      * Event-Handler-Methode für die beiden Buttons.
      *
-     * @param view  Button, der Event ausgelöst hat.
+     * @param view  Button, der das Event ausgelöst hat.
      */
     @Override
     public void onClick(View view) {
@@ -84,7 +84,8 @@ public class MainActivity extends Activity
 
 
     /**
-     * In dieser Methode wird eine andere Activity geöffnet.
+     * In dieser Methode wird eine andere Activity geöffnet
+     * (mit explizitem Intent).
      */
     protected void activityOeffnen() {
 
