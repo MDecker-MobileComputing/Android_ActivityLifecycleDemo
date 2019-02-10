@@ -20,6 +20,10 @@ Identifiers (names for classes, variables and methods), UI texts and Comments (J
 
 <br>
 
+The screenshots were taken from the app running in the Android SDK's emulator.
+
+<br>
+
 ----
 # License
 
