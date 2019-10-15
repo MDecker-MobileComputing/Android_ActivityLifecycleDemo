@@ -180,6 +180,7 @@ public class MainActivity extends Activity
         Log.i(TAG4LOGGING, zeile);
 
         if (_textViewLogOutput != null) {
+
             _textViewLogOutput.append(zeile + "\n");
         }
     }
