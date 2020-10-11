@@ -36,11 +36,7 @@ public class MainActivity extends Activity
 
 
     /**
-     * Lifecycle-Methode, wird bei Erzeugung der Activity-Instanz aufgerufen.
-     * Es wird zunächst die Layout-Datei geladen, und dann werden die
-     * Member-Variablen, die UI-Elemente repräsentieren, gefüllt; es wird
-     * auch die Activity-Instanz selbst als Event-Handler-Objekt für die
-     * beiden Buttons gesetzt.
+     * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {

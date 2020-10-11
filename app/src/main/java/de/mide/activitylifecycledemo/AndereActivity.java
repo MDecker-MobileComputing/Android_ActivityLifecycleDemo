@@ -14,10 +14,10 @@ import android.os.Bundle;
  */
 public class AndereActivity extends Activity {
 
-	/**
-	 * Lifecycle-Methode, lädt nur die Layout-Datei.
-	 */
-	@Override
+    /**
+     * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
+     */
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
