@@ -18,10 +18,10 @@ public class AndereActivity extends Activity {
      * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
      */
     @Override
-	protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
 
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_andere);
-	}
-	
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_andere);
+    }
+
 };

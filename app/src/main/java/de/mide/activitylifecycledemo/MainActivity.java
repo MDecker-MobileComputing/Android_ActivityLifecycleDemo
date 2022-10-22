@@ -19,7 +19,7 @@ import android.widget.TextView;
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class MainActivity extends Activity
-                          implements View.OnClickListener {
+        implements View.OnClickListener {
 
     /** Tag für Log-Messages der ganzen App. */
     protected static final String TAG4LOGGING = "LifecycleDemo";
@@ -40,7 +40,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -97,7 +97,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onStart() {
-        
+
         super.onStart();
         schreibeZeile("onStart() aufgerufen");
     }
@@ -109,7 +109,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onRestart() {
-        
+
         super.onRestart();
         schreibeZeile("onRestart() aufgerufen");
     }
@@ -121,7 +121,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onResume() {
-        
+
         super.onResume();
         schreibeZeile("onResume() aufgerufen");
     }
@@ -134,7 +134,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onPause() {
-        
+
         schreibeZeile("onPause() aufgerufen");
         super.onPause();
     }
@@ -146,7 +146,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onStop() {
-        
+
         schreibeZeile("onStop() aufgerufen");
         super.onStop();
     }
@@ -159,7 +159,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onDestroy() {
-        
+
         schreibeZeile("onDestroy() aufgerufen");
         super.onDestroy();
     }
