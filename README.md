@@ -1,4 +1,6 @@
-# Android-App "Activity Lifecycle Demo"
+# Android-App "Activity Lifecycle Demo" #
+
+<br>
 
 App demonstrates when the different lifecycle methods of an instance of class 
 [Activity](https://developer.android.com/reference/android/app/Activity).
@@ -10,7 +12,10 @@ Identifiers (names for classes, variables and methods), UI texts and Comments (J
 <br>
 
 ----
-## Screenshots
+
+## Screenshots ##
+
+<br>
 
 ![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
 
@@ -25,6 +30,11 @@ The screenshots were taken from the app running in the Android SDK's emulator.
 <br>
 
 ----
-# License
+
+## License ##
+
+<br>
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).
+
+<br>
