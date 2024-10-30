@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Activity-Lifecycle</string>
+    <string name="app_name">Lifecycle-Demo</string>
 
     <string name="button_activity"       >Andere Activity</string>
     <string name="button_loeschen"       >Log leeren</string>
