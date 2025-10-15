@@ -19,7 +19,7 @@ import android.widget.TextView;
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class MainActivity extends Activity
-        implements View.OnClickListener {
+                          implements View.OnClickListener {
 
     /** Tag für Log-Messages der ganzen App. */
     protected static final String TAG4LOGGING = "LifecycleDemo";
@@ -39,21 +39,21 @@ public class MainActivity extends Activity
      * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState ) {
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_main );
 
-        _textViewLogOutput = findViewById(R.id.textviewForLogoutput);
+        _textViewLogOutput = findViewById( R.id.textviewForLogoutput );
         _textViewLogOutput.setMovementMethod( new ScrollingMovementMethod() );
 
-        _buttonActivity  = findViewById(R.id.buttonActivity );
-        _buttonLogLeeren = findViewById(R.id.buttonLogLeeren);
+        _buttonActivity  = findViewById( R.id.buttonActivity  );
+        _buttonLogLeeren = findViewById( R.id.buttonLogLeeren );
 
-        _buttonActivity.setOnClickListener (this);
-        _buttonLogLeeren.setOnClickListener(this);
+        _buttonActivity.setOnClickListener ( this );
+        _buttonLogLeeren.setOnClickListener( this );
 
-        schreibeZeile("onCreate() aufgerufen");
+        schreibeZeile( "onCreate() aufgerufen" );
     }
 
 
@@ -65,17 +65,17 @@ public class MainActivity extends Activity
     @Override
     public void onClick(View view) {
 
-        if (view == _buttonActivity) {
+        if ( view == _buttonActivity ) {
 
             activityOeffnen();
 
-        } else if (view == _buttonLogLeeren) {
+        } else if ( view == _buttonLogLeeren ) {
 
-            _textViewLogOutput.setText("");
+            _textViewLogOutput.setText( "" );
 
         } else {
 
-            schreibeZeile("Interner Fehler: Event-Handler für unerwartetes View-Objekt aufgerufen");
+            schreibeZeile( "Interner Fehler: Event-Handler für unerwartetes View-Objekt aufgerufen" );
         }
     }
 
@@ -86,8 +86,8 @@ public class MainActivity extends Activity
      */
     protected void activityOeffnen() {
 
-        Intent intent = new Intent(this, AndereActivity.class);
-        startActivity(intent);
+        Intent intent = new Intent( this, AndereActivity.class );
+        startActivity( intent );
     }
 
 
@@ -99,7 +99,7 @@ public class MainActivity extends Activity
     protected void onStart() {
 
         super.onStart();
-        schreibeZeile("onStart() aufgerufen");
+        schreibeZeile( "onStart() aufgerufen" );
     }
 
 
@@ -111,7 +111,7 @@ public class MainActivity extends Activity
     protected void onRestart() {
 
         super.onRestart();
-        schreibeZeile("onRestart() aufgerufen");
+        schreibeZeile( "onRestart() aufgerufen" );
     }
 
 
@@ -123,7 +123,7 @@ public class MainActivity extends Activity
     protected void onResume() {
 
         super.onResume();
-        schreibeZeile("onResume() aufgerufen");
+        schreibeZeile( "onResume() aufgerufen" );
     }
 
 
@@ -135,7 +135,7 @@ public class MainActivity extends Activity
     @Override
     protected void onPause() {
 
-        schreibeZeile("onPause() aufgerufen");
+        schreibeZeile( "onPause() aufgerufen" );
         super.onPause();
     }
 
@@ -147,7 +147,7 @@ public class MainActivity extends Activity
     @Override
     protected void onStop() {
 
-        schreibeZeile("onStop() aufgerufen");
+        schreibeZeile( "onStop() aufgerufen" );
         super.onStop();
     }
 
@@ -160,7 +160,7 @@ public class MainActivity extends Activity
     @Override
     protected void onDestroy() {
 
-        schreibeZeile("onDestroy() aufgerufen");
+        schreibeZeile( "onDestroy() aufgerufen" );
         super.onDestroy();
     }
 
@@ -171,13 +171,13 @@ public class MainActivity extends Activity
      *
      * @param zeile  Auszugebender String
      */
-    protected void schreibeZeile(String zeile) {
+    protected void schreibeZeile( String zeile ) {
 
-        Log.i(TAG4LOGGING, zeile);
+        Log.i( TAG4LOGGING, zeile );
 
-        if (_textViewLogOutput != null) {
+        if ( _textViewLogOutput != null ) {
 
-            _textViewLogOutput.append(zeile + "\n");
+            _textViewLogOutput.append( zeile + "\n" );
         }
     }
 
