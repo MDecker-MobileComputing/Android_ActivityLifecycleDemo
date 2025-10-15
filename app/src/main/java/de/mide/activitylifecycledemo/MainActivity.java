@@ -35,6 +35,15 @@ public class MainActivity extends Activity
     protected Button _buttonLogLeeren = null;
 
 
+    private int zaehlerCreate  = 0;
+    private int zaehlerStart   = 0;
+    private int zaehlerRestart = 0;
+    private int zaehlerResume  = 0;
+    private int zaehlerPause   = 0;
+    private int zaehlerStop    = 0;
+    private int zaehlerDestroy = 0;
+
+
     /**
      * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
      */
@@ -53,7 +62,7 @@ public class MainActivity extends Activity
         _buttonActivity.setOnClickListener ( this );
         _buttonLogLeeren.setOnClickListener( this );
 
-        schreibeZeile( "onCreate() aufgerufen" );
+        schreibeZeile( "onCreate() aufgerufen (" + ++zaehlerCreate + ")" );
     }
 
 
@@ -99,7 +108,7 @@ public class MainActivity extends Activity
     protected void onStart() {
 
         super.onStart();
-        schreibeZeile( "onStart() aufgerufen" );
+        schreibeZeile( "onStart() aufgerufen (" +  ++zaehlerStart + ")" );
     }
 
 
@@ -111,7 +120,7 @@ public class MainActivity extends Activity
     protected void onRestart() {
 
         super.onRestart();
-        schreibeZeile( "onRestart() aufgerufen" );
+        schreibeZeile( "onRestart() aufgerufen (" +  ++zaehlerRestart + ")" );
     }
 
 
@@ -123,7 +132,7 @@ public class MainActivity extends Activity
     protected void onResume() {
 
         super.onResume();
-        schreibeZeile( "onResume() aufgerufen" );
+        schreibeZeile( "onResume() aufgerufen (" +  ++zaehlerResume + ")" );
     }
 
 
@@ -135,7 +144,7 @@ public class MainActivity extends Activity
     @Override
     protected void onPause() {
 
-        schreibeZeile( "onPause() aufgerufen" );
+        schreibeZeile( "onPause() aufgerufen (" + ++zaehlerPause + ")" );
         super.onPause();
     }
 
@@ -147,7 +156,7 @@ public class MainActivity extends Activity
     @Override
     protected void onStop() {
 
-        schreibeZeile( "onStop() aufgerufen" );
+        schreibeZeile( "onStop() aufgerufen (" + ++zaehlerStop + ")" );
         super.onStop();
     }
 
@@ -160,7 +169,7 @@ public class MainActivity extends Activity
     @Override
     protected void onDestroy() {
 
-        schreibeZeile( "onDestroy() aufgerufen" );
+        schreibeZeile( "onDestroy() aufgerufen " + ++zaehlerDestroy + ")" );
         super.onDestroy();
     }
 
