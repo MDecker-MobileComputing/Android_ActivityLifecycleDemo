@@ -2,6 +2,7 @@
 
 <br>
 
+Dieses Repo enthält eine Android-Studio-Projekt für eine native Android-App mit Java.
 Die App demonstriert verschiedene Lifecycle-Methoden der Klasse 
 [Activity](https://developer.android.com/reference/android/app/Activity#activity-lifecycle).
 
@@ -13,7 +14,7 @@ Die App demonstriert verschiedene Lifecycle-Methoden der Klasse
 
 <br>
 
-![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
+![Screenshot 1](screenshot_1.png) &nbsp; ![Screenshot 2](screenshot_2.png)
 
 <br>
 
@@ -30,3 +31,4 @@ Die App demonstriert verschiedene Lifecycle-Methoden der Klasse
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).
 
 <br>
+
