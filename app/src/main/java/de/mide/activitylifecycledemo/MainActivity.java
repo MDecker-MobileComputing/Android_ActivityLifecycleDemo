@@ -1,6 +1,8 @@
 package de.mide.activitylifecycledemo;
 
-import android.app.Activity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -18,7 +20,7 @@ import android.widget.TextView;
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
                           implements View.OnClickListener {
 
     /** Tag für Log-Messages der ganzen App. */
@@ -62,8 +64,27 @@ public class MainActivity extends Activity
         _buttonActivity.setOnClickListener ( this );
         _buttonLogLeeren.setOnClickListener( this );
 
+        actionbarInitialisieren();
+
         schreibeZeile( "onCreate() aufgerufen (" + ++zaehlerCreate + ")" );
     }
+
+
+    /**
+     * Actionbar initialisieren.
+     */
+    private void actionbarInitialisieren() {
+
+        final ActionBar actionBar = getSupportActionBar();
+        if ( actionBar == null ) {
+
+            Log.w( TAG4LOGGING, "Keine ActionBar gefunden." );
+            return;
+        }
+
+        actionBar.setTitle( R.string.app_name );
+    }
+
 
 
     /**
@@ -108,7 +129,8 @@ public class MainActivity extends Activity
     protected void onStart() {
 
         super.onStart();
-        schreibeZeile( "onStart() aufgerufen (" +  ++zaehlerStart + ")" );
+        zaehlerStart++;
+        schreibeZeile( "onStart() aufgerufen (" +  zaehlerStart + ")" );
     }
 
 
@@ -120,7 +142,8 @@ public class MainActivity extends Activity
     protected void onRestart() {
 
         super.onRestart();
-        schreibeZeile( "onRestart() aufgerufen (" +  ++zaehlerRestart + ")" );
+        zaehlerRestart++;
+        schreibeZeile( "onRestart() aufgerufen (" +  zaehlerRestart + ")" );
     }
 
 
@@ -132,7 +155,8 @@ public class MainActivity extends Activity
     protected void onResume() {
 
         super.onResume();
-        schreibeZeile( "onResume() aufgerufen (" +  ++zaehlerResume + ")" );
+        zaehlerResume++;
+        schreibeZeile( "onResume() aufgerufen (" +  zaehlerResume + ")" );
     }
 
 
@@ -144,7 +168,8 @@ public class MainActivity extends Activity
     @Override
     protected void onPause() {
 
-        schreibeZeile( "onPause() aufgerufen (" + ++zaehlerPause + ")" );
+        zaehlerPause++;
+        schreibeZeile( "onPause() aufgerufen (" +  zaehlerPause + ")" );
         super.onPause();
     }
 
@@ -156,7 +181,8 @@ public class MainActivity extends Activity
     @Override
     protected void onStop() {
 
-        schreibeZeile( "onStop() aufgerufen (" + ++zaehlerStop + ")" );
+        zaehlerStop++;
+        schreibeZeile( "onStop() aufgerufen (" +  zaehlerStop + ")" );
         super.onStop();
     }
 
@@ -169,7 +195,8 @@ public class MainActivity extends Activity
     @Override
     protected void onDestroy() {
 
-        schreibeZeile( "onDestroy() aufgerufen " + ++zaehlerDestroy + ")" );
+        zaehlerDestroy++;
+        schreibeZeile( "onDestroy() aufgerufen " +  zaehlerDestroy + ")" );
         super.onDestroy();
     }
 
